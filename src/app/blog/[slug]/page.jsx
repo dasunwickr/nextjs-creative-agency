@@ -4,16 +4,6 @@ import PostUser from "@/components/postuser/postUser";
 import { Suspense } from "react";
 import { getPost } from "@/lib/data";
 
-// const getData = async (slug) => {
-//   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${slug}`);
-
-//   if (!res.ok) {
-//     throw new Error("Failed to fetch data");
-//   }
-
-//   return res.json();
-// };
-
 const SinglePostPage = async ({ params }) => {
   const { slug } = params;
   const post = await getPost({ slug });
